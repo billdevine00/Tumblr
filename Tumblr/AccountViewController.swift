@@ -1,5 +1,5 @@
 //
-//  ComposeViewController.swift
+//  AccountViewController.swift
 //  Tumblr
 //
 //  Created by WilliamDevine on 10/12/14.
@@ -8,15 +8,11 @@
 
 import UIKit
 
-class ComposeViewController: UIViewController {
-
-    var isPresenting: Bool = true
+class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        
         // Do any additional setup after loading the view.
     }
 
@@ -25,12 +21,7 @@ class ComposeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   
-    @IBAction func onNevermind(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
 
-    
     /*
     // MARK: - Navigation
 

@@ -1,5 +1,5 @@
 //
-//  ComposeViewController.swift
+//  TrendingViewController.swift
 //  Tumblr
 //
 //  Created by WilliamDevine on 10/12/14.
@@ -8,15 +8,16 @@
 
 import UIKit
 
-class ComposeViewController: UIViewController {
+class TrendingViewController: UIViewController {
 
-    var isPresenting: Bool = true
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var trendingFeedImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        scrollView.contentSize.height = trendingFeedImage.frame.height
         
+
         // Do any additional setup after loading the view.
     }
 
@@ -25,12 +26,7 @@ class ComposeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   
-    @IBAction func onNevermind(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
 
-    
     /*
     // MARK: - Navigation
 
