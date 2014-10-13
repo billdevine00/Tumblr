@@ -100,10 +100,12 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     override func prepareForSegue(ComposeSegue: UIStoryboardSegue, sender: AnyObject!) {
         var destinationVC = ComposeSegue.destinationViewController as ComposeViewController
+//        var LoginVC = LoginSegue.destinationViewController as LoginViewController
         destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
         destinationVC.transitioningDelegate = self
         
     }
+    
     
     func animationControllerForPresentedController(presented: UIViewController!, presentingController presenting: UIViewController!, sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
         isPresenting = true

@@ -261,7 +261,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cic-58-saH" kind="modal" id="7ah-Qs-Bvj"/>
+                                    <segue destination="cic-58-saH" kind="modal" identifier="LoginSegue" id="7ah-Qs-Bvj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -295,7 +295,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.28235295414924622" green="0.34117648005485535" blue="0.42745101451873779" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.13495433330535889" green="0.26058900356292725" blue="0.452289879322052" alpha="0.7324544270833333" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIo-4V-owr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -363,6 +363,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dsX-oG-ggr"/>
+        <segue reference="7ah-Qs-Bvj"/>
     </inferredMetricsTieBreakers>
 </document>

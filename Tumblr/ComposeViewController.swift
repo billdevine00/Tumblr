@@ -20,7 +20,6 @@ class ComposeViewController: UIViewController, UIViewControllerTransitioningDele
 
     var isPresenting: Bool = true
 
-    let offstageBottom = CGAffineTransformMakeTranslation(-150, 0)
 //    let offstageTop = CGAffineTransformMakeTranslation(150, 0)
     
     override func viewDidLoad() {
