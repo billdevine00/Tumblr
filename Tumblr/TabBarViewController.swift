@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController {
+class TabBarViewController: UIViewController, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var composeButton: UIButton!
@@ -18,27 +18,31 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var indicatorView: UIView!
 
     var homeViewController: UIViewController!
-    var searchViewController: UIViewController!
+    var search2ViewController: UIViewController!
     var composeViewController: UIViewController!
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
     
-    var selectedTab: Int!
-    
+    var isPresenting: Bool = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as UIViewController
-        searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController") as UIViewController
+        search2ViewController = storyboard.instantiateViewControllerWithIdentifier("Search2ViewController") as UIViewController
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController") as UIViewController
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController") as UIViewController
         composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController") as UIViewController
         
-        
+        onTab(homeButton)
+
         
         // Do any additional setup after loading the view.
+       
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,17 +56,20 @@ class TabBarViewController: UIViewController {
         searchButton.selected = false
         profileButton.selected = false
         trendingButton.selected = false
-        
+
         switch sender.tag {
+            
         case 0:
-            println("case 0")
+            println("home")
             containerView.addSubview(homeViewController.view)
             homeViewController.view.frame = containerView.frame
-
+            self.addChildViewController(homeViewController)
+            homeViewController.didMoveToParentViewController(self)
+            
         case 1:
-            println("case 1")
-            containerView.addSubview(searchViewController.view)
-            searchViewController.view.frame = containerView.frame
+            println("search")
+            containerView.addSubview(search2ViewController.view)
+            search2ViewController.view.frame = containerView.frame
             
 //        case 2:
 //            println("case 2")
@@ -70,14 +77,18 @@ class TabBarViewController: UIViewController {
 //            composeViewController.view.frame = containerView.frame
             
         case 3:
-            println("case 3")
+            println("profile")
             containerView.addSubview(accountViewController.view)
             accountViewController.view.frame = containerView.frame
+            self.addChildViewController(accountViewController)
+            accountViewController.didMoveToParentViewController(self)
             
         case 4:
-            println("case 4")
+            println("trending")
             containerView.addSubview(trendingViewController.view)
             trendingViewController.view.frame = containerView.frame
+            self.addChildViewController(trendingViewController)
+            trendingViewController.didMoveToParentViewController(self)
             
         default:
             println("none")
@@ -85,8 +96,62 @@ class TabBarViewController: UIViewController {
         }
         
     }
+    
+    
+    override func prepareForSegue(ComposeSegue: UIStoryboardSegue, sender: AnyObject!) {
+        var destinationVC = ComposeSegue.destinationViewController as ComposeViewController
+        destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
+        destinationVC.transitioningDelegate = self
+        
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController!, presentingController presenting: UIViewController!, sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+        isPresenting = true
+        return self
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+        isPresenting = false
+        return self
+    }
+    
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+        // The value here should be the duration of the animations scheduled in the animationTransition method
+        return 0.4
+    }
+    
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        println("animating transition")
+        var containerView = transitionContext.containerView()
+        var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        
+        
+        
+        if (isPresenting) {
+            containerView.addSubview(toViewController.view)
+            toViewController.view.alpha = 0
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                toViewController.view.alpha = 1
+                }) { (finished: Bool) -> Void in
+                    transitionContext.completeTransition(true)
 
-    /*
+        }
+
+        } else {
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                fromViewController.view.alpha = 0
+                }) { (finished: Bool) -> Void in
+                    transitionContext.completeTransition(true)
+                    fromViewController.view.removeFromSuperview()
+            }
+        }
+    }
+    
+    
+    
+    
+       /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

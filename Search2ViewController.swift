@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  Search2ViewController.swift
 //  Tumblr
 //
 //  Created by WilliamDevine on 10/12/14.
@@ -8,16 +8,22 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class Search2ViewController: UIViewController {
 
-    @IBOutlet weak var explorePopUp: UIImageView!
+    @IBOutlet weak var spinnerImage: UIImageView!
+    @IBOutlet weak var searchFeedImage: UIImageView!
     
+    @IBOutlet var homeView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-    
-        
-//        explorePopover.hidden = true
+        var images = UIImage.animatedImageNamed("loading-", duration: 1)
+        spinnerImage.image = images
+        searchFeedImage.hidden = true
+        delay(1) {
+            self.spinnerImage.hidden = true
+        self.searchFeedImage.hidden = false
+            
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -26,21 +32,18 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool)
-    {
 
-        self.explorePopUp.frame.origin.y = 440
-        
-        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat, animations: { () -> Void in
-            self.explorePopUp.frame.origin.y = 450
-            }) { (Finished: Bool) -> Void in
-                //
-        }
-
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
-      
-        
-
+   
+    
+    
     /*
     // MARK: - Navigation
 
@@ -51,4 +54,6 @@ class HomeViewController: UIViewController {
     }
     */
 
+    
+    
 }

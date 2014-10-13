@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  LoginViewController.swift
 //  Tumblr
 //
 //  Created by WilliamDevine on 10/12/14.
@@ -8,16 +8,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    @IBOutlet weak var explorePopUp: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-    
-        
-//        explorePopover.hidden = true
+
         // Do any additional setup after loading the view.
     }
 
@@ -26,20 +21,9 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool)
-    {
-
-        self.explorePopUp.frame.origin.y = 440
-        
-        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat, animations: { () -> Void in
-            self.explorePopUp.frame.origin.y = 450
-            }) { (Finished: Bool) -> Void in
-                //
-        }
-
+    @IBAction func onCancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-      
-        
 
     /*
     // MARK: - Navigation

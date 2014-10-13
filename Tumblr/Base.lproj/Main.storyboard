@@ -107,37 +107,59 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_spinner" id="apO-Lr-7c9">
-                                <rect key="frame" x="87" y="182" width="146" height="146"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_overlay" id="w0K-rZ-qsL">
                                 <rect key="frame" x="0.0" y="336" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore_popup" id="Sck-DA-De8">
+                                <rect key="frame" x="-3" y="467" width="185" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kgo-vO-JJt">
+                                <rect key="frame" x="247" y="30" width="73" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cic-58-saH" kind="modal" id="dsX-oG-ggr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="explorePopUp" destination="Sck-DA-De8" id="DCM-Vl-Mro"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aji-44-frG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="1032"/>
+            <point key="canvasLocation" x="-59" y="1032"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search2 View Controller-->
         <scene sceneID="J4V-6W-9B7">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="lFa-o4-H5P" customClass="SearchViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Search2ViewController" id="lFa-o4-H5P" customClass="Search2ViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ViT-5s-vNk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_feed" id="aQn-d6-lsD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_feed" id="IqJ-z0-93i">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="GQz-br-Awu">
+                                <rect key="frame" x="130" y="274" width="61" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.19607844948768616" green="0.26666668057441711" blue="0.35686275362968445" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="homeView" destination="ViT-5s-vNk" id="EYx-XH-ECH"/>
+                        <outlet property="searchFeedImage" destination="IqJ-z0-93i" id="Zkz-Bv-x5b"/>
+                        <outlet property="spinnerImage" destination="GQz-br-Awu" id="5cj-RI-pyP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHb-9S-JOE" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,6 +228,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.12091036885976791" blue="0.29068773984909058" alpha="0.64103190104166663" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="chatButton" destination="5Nb-2L-wSD" id="5HK-U2-Y3E"/>
+                        <outlet property="composeView" destination="bbv-kU-CHi" id="5Av-Qy-vmI"/>
+                        <outlet property="linkButton" destination="zhc-ga-AUK" id="Ln5-Am-cfd"/>
+                        <outlet property="photoButton" destination="rY1-3n-yoa" id="wPc-xG-tw9"/>
+                        <outlet property="quoteButton" destination="0hM-uQ-47p" id="Kcg-0u-AFl"/>
+                        <outlet property="textButton" destination="CeS-PY-i7Z" id="dHi-z5-oHx"/>
+                        <outlet property="videoButton" destination="sli-jL-v82" id="UX6-5K-tdD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iP-O8-Loh" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,6 +254,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s0s-ui-Qr0">
+                                <rect key="frame" x="162" y="384" width="111" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cic-58-saH" kind="modal" id="7ah-Qs-Bvj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -230,6 +271,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVG-ys-Hng" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1216" y="1032"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="KgZ-yv-KOe">
+            <objects>
+                <viewController id="cic-58-saH" customClass="LoginViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k6A-QS-7Xr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_form" id="eSu-ML-D8B">
+                                <rect key="frame" x="10" y="163" width="300" height="132"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iWq-K3-tpN">
+                                <rect key="frame" x="10" y="250" width="148" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCancel:" destination="cic-58-saH" eventType="touchUpInside" id="KHL-tO-9fw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28235295414924622" green="0.34117648005485535" blue="0.42745101451873779" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIo-4V-owr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="1711"/>
         </scene>
         <!--Trending View Controller-->
         <scene sceneID="vWu-SX-H4H">
@@ -268,11 +339,12 @@
         <image name="account_selected_icon" width="35" height="35"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="explore_popup" width="185" height="77"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>
-        <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
+        <image name="login_form" width="300" height="132"/>
         <image name="nevermind" width="320" height="53"/>
         <image name="photo_icon" width="75" height="95"/>
         <image name="quote_icon" width="75" height="96"/>
@@ -290,4 +362,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="dsX-oG-ggr"/>
+    </inferredMetricsTieBreakers>
 </document>
