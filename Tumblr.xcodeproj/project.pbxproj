@@ -182,6 +182,7 @@
 				TargetAttributes = {
 					65E0F0A719EB0C68005ADE03 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = C26K3S22S7;
 					};
 					65E0F0BC19EB0C68005ADE03 = {
 						CreatedOnToolsVersion = 6.0;
@@ -433,6 +434,7 @@
 				65E0F0C919EB0C68005ADE03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65E0F0CA19EB0C68005ADE03 /* Build configuration list for PBXNativeTarget "TumblrTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +443,7 @@
 				65E0F0CC19EB0C68005ADE03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var explorePopUp: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +28,13 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(animated: Bool)
     {
 
-        self.explorePopUp.frame.origin.y = 440
-        
-        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat, animations: { () -> Void in
-            self.explorePopUp.frame.origin.y = 450
-            }) { (Finished: Bool) -> Void in
-                //
-        }
+//        self.explorePopUp.frame.origin.y = 440
+//        
+//        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat, animations: { () -> Void in
+//            self.explorePopUp.frame.origin.y = 450
+//            }) { (Finished: Bool) -> Void in
+//                //
+//        }
 
     }
       

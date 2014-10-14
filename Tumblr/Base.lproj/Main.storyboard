@@ -17,7 +17,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tyu-uA-Bnq" userLabel="HomeButton">
-                                        <rect key="frame" x="13" y="5" width="35" height="35"/>
+                                        <rect key="frame" x="17" y="5" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="home_icon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,7 +28,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ym1-dc-78c" userLabel="SearchButton">
-                                        <rect key="frame" x="71" y="5" width="35" height="35"/>
+                                        <rect key="frame" x="80" y="6" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="search_icon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,6 +36,28 @@
                                         <state key="selected" image="search_selected_icon"/>
                                         <connections>
                                             <action selector="onTab:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6mS-3p-ySZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RAQ-LE-B7L" userLabel="AccountButton">
+                                        <rect key="frame" x="211" y="5" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="account_icon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="account_selected_icon"/>
+                                        <connections>
+                                            <action selector="onTab:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hE4-Kg-HMY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mey-iZ-qmD" userLabel="TrendingButton">
+                                        <rect key="frame" x="265" y="5" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="trending_icon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="trending_selected_icon"/>
+                                        <connections>
+                                            <action selector="onTab:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fa6-Ff-hSg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7KA-U1-Mv7" userLabel="ComposeButton">
@@ -48,42 +70,25 @@
                                             <segue destination="vnt-MF-0Ox" kind="modal" identifier="ComposeSegue" id="CT5-Dx-4Yb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RAQ-LE-B7L" userLabel="AccountButton">
-                                        <rect key="frame" x="213" y="5" width="35" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="account_icon">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="selected" image="account_selected_icon"/>
-                                        <connections>
-                                            <action selector="onTab:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hE4-Kg-HMY"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mey-iZ-qmD" userLabel="TrendingButton">
-                                        <rect key="frame" x="269" y="5" width="35" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="trending_icon">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="selected" image="trending_selected_icon"/>
-                                        <connections>
-                                            <action selector="onTab:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fa6-Ff-hSg"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.19607844948768616" green="0.25882354378700256" blue="0.3333333432674408" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.25882352941176467" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="fTR-Qe-HQN">
+                            <view contentMode="scaleToFill" id="fTR-Qe-HQN" userLabel="containerView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore_popup" id="0jT-1R-vP9">
+                                <rect key="frame" x="0.0" y="438" width="185" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="composeButton" destination="7KA-U1-Mv7" id="pSR-JP-0IF"/>
                         <outlet property="containerView" destination="fTR-Qe-HQN" id="OPe-JN-6fh"/>
+                        <outlet property="explorePopUp" destination="0jT-1R-vP9" id="vMn-6d-48h"/>
                         <outlet property="homeButton" destination="Tyu-uA-Bnq" id="PSF-1r-H5e"/>
                         <outlet property="indicatorView" destination="Zks-Rq-yIo" id="bI2-Q3-CFg"/>
                         <outlet property="profileButton" destination="RAQ-LE-B7L" id="geo-tZ-pbf"/>
@@ -111,10 +116,6 @@
                                 <rect key="frame" x="0.0" y="336" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore_popup" id="Sck-DA-De8">
-                                <rect key="frame" x="-3" y="467" width="185" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kgo-vO-JJt">
                                 <rect key="frame" x="247" y="30" width="73" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -128,9 +129,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="explorePopUp" destination="Sck-DA-De8" id="DCM-Vl-Mro"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aji-44-frG" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,7 +151,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.19607844948768616" green="0.26666668057441711" blue="0.35686275362968445" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.26666666666666666" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="homeView" destination="ViT-5s-vNk" id="EYx-XH-ECH"/>
@@ -226,7 +224,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.12091036885976791" blue="0.29068773984909058" alpha="0.64103190104166663" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.12091036885976791" blue="0.29068773984909058" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="chatButton" destination="5Nb-2L-wSD" id="5HK-U2-Y3E"/>
@@ -363,6 +361,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="7ah-Qs-Bvj"/>
+        <segue reference="dsX-oG-ggr"/>
     </inferredMetricsTieBreakers>
 </document>

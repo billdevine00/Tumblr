@@ -16,22 +16,26 @@ class Search2ViewController: UIViewController {
     @IBOutlet var homeView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var images = UIImage.animatedImageNamed("loading-", duration: 1)
-        spinnerImage.image = images
-        searchFeedImage.hidden = true
-        delay(1) {
-            self.spinnerImage.hidden = true
-        self.searchFeedImage.hidden = false
-            
-        }
+       
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        var images = UIImage.animatedImageNamed("loading-", duration: 1)
+        spinnerImage.image = images
+        searchFeedImage.hidden = true
+        delay(1) {
+            self.spinnerImage.hidden = true
+            self.searchFeedImage.hidden = false
+            
+        }
+        
+    }
 
     func delay(delay:Double, closure:()->()) {
         dispatch_after(

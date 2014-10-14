@@ -16,6 +16,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     @IBOutlet weak var trendingButton: UIButton!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var indicatorView: UIView!
+    @IBOutlet weak var explorePopUp: UIImageView!
 
     var homeViewController: UIViewController!
     var search2ViewController: UIViewController!
@@ -41,8 +42,21 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         
         // Do any additional setup after loading the view.
        
+        self.explorePopUp.frame.origin.y = 440
         
+        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.Autoreverse | UIViewAnimationOptions.Repeat, animations: { () -> Void in
+            self.explorePopUp.frame.origin.y = 450
+            }) { (Finished: Bool) -> Void in
+                //
+        }
 
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        
+      
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,11 +79,20 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             homeViewController.view.frame = containerView.frame
             self.addChildViewController(homeViewController)
             homeViewController.didMoveToParentViewController(self)
+            search2ViewController.view.removeFromSuperview()
+            accountViewController.view.removeFromSuperview()
+            trendingViewController.view.removeFromSuperview()
+            explorePopUp.hidden = false
+
             
         case 1:
             println("search")
             containerView.addSubview(search2ViewController.view)
             search2ViewController.view.frame = containerView.frame
+            accountViewController.view.removeFromSuperview()
+            trendingViewController.view.removeFromSuperview()
+            homeViewController.view.removeFromSuperview()
+            explorePopUp.hidden = true
             
 //        case 2:
 //            println("case 2")
@@ -82,6 +105,11 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             accountViewController.view.frame = containerView.frame
             self.addChildViewController(accountViewController)
             accountViewController.didMoveToParentViewController(self)
+            homeViewController.view.removeFromSuperview()
+            search2ViewController.view.removeFromSuperview()
+            trendingViewController.view.removeFromSuperview()
+            explorePopUp.hidden = false
+
             
         case 4:
             println("trending")
@@ -89,6 +117,11 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             trendingViewController.view.frame = containerView.frame
             self.addChildViewController(trendingViewController)
             trendingViewController.didMoveToParentViewController(self)
+            homeViewController.view.removeFromSuperview()
+            search2ViewController.view.removeFromSuperview()
+            accountViewController.view.removeFromSuperview()
+            explorePopUp.hidden = false
+
             
         default:
             println("none")
