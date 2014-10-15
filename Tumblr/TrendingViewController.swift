@@ -10,12 +10,9 @@ import UIKit
 
 class TrendingViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var trendingFeedImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize.height = trendingFeedImage.frame.height
         
 
         // Do any additional setup after loading the view.
