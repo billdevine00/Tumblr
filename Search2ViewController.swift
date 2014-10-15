@@ -16,7 +16,6 @@ class Search2ViewController: UIViewController {
     @IBOutlet var homeView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         // Do any additional setup after loading the view.
     }
     

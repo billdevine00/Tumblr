@@ -83,6 +83,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             accountViewController.view.removeFromSuperview()
             trendingViewController.view.removeFromSuperview()
             explorePopUp.hidden = false
+            homeButton.selected = true
 
             
         case 1:
@@ -93,6 +94,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             trendingViewController.view.removeFromSuperview()
             homeViewController.view.removeFromSuperview()
             explorePopUp.hidden = true
+            searchButton.selected = true
             
 //        case 2:
 //            println("case 2")
@@ -109,6 +111,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             search2ViewController.view.removeFromSuperview()
             trendingViewController.view.removeFromSuperview()
             explorePopUp.hidden = false
+            profileButton.selected = true
 
             
         case 4:
@@ -121,7 +124,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             search2ViewController.view.removeFromSuperview()
             accountViewController.view.removeFromSuperview()
             explorePopUp.hidden = false
-
+            trendingButton.selected = true
             
         default:
             println("none")

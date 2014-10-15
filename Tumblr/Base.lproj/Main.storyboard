@@ -22,7 +22,7 @@
                                         <state key="normal" image="home_icon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" image="account_selected_icon"/>
+                                        <state key="selected" image="home_selected_icon"/>
                                         <connections>
                                             <action selector="onTab:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6hM-hj-jMf"/>
                                         </connections>
@@ -275,7 +275,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.13495433330535889" green="0.26058900356292725" blue="0.452289879322052" alpha="0.7324544270833333" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.26666666666666666" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIo-4V-owr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,6 +314,7 @@
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>
+        <image name="home_selected_icon" width="35" height="35"/>
         <image name="link_icon" width="75" height="95"/>
         <image name="login_form" width="300" height="132"/>
         <image name="nevermind" width="320" height="53"/>

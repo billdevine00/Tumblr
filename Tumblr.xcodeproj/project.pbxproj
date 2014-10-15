@@ -11,7 +11,6 @@
 		65E0F0B019EB0C68005ADE03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E0F0AF19EB0C68005ADE03 /* ViewController.swift */; };
 		65E0F0B319EB0C68005ADE03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E0F0B119EB0C68005ADE03 /* Main.storyboard */; };
 		65E0F0B519EB0C68005ADE03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65E0F0B419EB0C68005ADE03 /* Images.xcassets */; };
-		65E0F0B819EB0C68005ADE03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65E0F0B619EB0C68005ADE03 /* LaunchScreen.xib */; };
 		65E0F0C419EB0C68005ADE03 /* TumblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E0F0C319EB0C68005ADE03 /* TumblrTests.swift */; };
 		65E0F0CE19EB0D9A005ADE03 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E0F0CD19EB0D9A005ADE03 /* TabBarViewController.swift */; };
 		65E0F0D019EB118A005ADE03 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E0F0CF19EB118A005ADE03 /* HomeViewController.swift */; };
@@ -39,7 +38,6 @@
 		65E0F0AF19EB0C68005ADE03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65E0F0B219EB0C68005ADE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65E0F0B419EB0C68005ADE03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		65E0F0B719EB0C68005ADE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		65E0F0BD19EB0C68005ADE03 /* TumblrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumblrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E0F0C219EB0C68005ADE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65E0F0C319EB0C68005ADE03 /* TumblrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumblrTests.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				65E0F0CF19EB118A005ADE03 /* HomeViewController.swift */,
 				65E0F0CD19EB0D9A005ADE03 /* TabBarViewController.swift */,
 				65E0F0B419EB0C68005ADE03 /* Images.xcassets */,
-				65E0F0B619EB0C68005ADE03 /* LaunchScreen.xib */,
 				65E0F0AB19EB0C68005ADE03 /* Supporting Files */,
 			);
 			path = Tumblr;
@@ -215,7 +212,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E0F0B319EB0C68005ADE03 /* Main.storyboard in Resources */,
-				65E0F0B819EB0C68005ADE03 /* LaunchScreen.xib in Resources */,
 				65E0F0B519EB0C68005ADE03 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,14 +267,6 @@
 				65E0F0B219EB0C68005ADE03 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		65E0F0B619EB0C68005ADE03 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				65E0F0B719EB0C68005ADE03 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
