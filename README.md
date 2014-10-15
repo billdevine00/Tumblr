@@ -2,7 +2,7 @@ Tumblr
 ======
 Hours Spent: 13
 
-![alt tag](FB_HW.gif)
+![alt tag](tumblr.gif)
 
 
 All items listed below were completed: 
